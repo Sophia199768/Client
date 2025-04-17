@@ -11,7 +11,6 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-# Основное приложение
 add_executable(qtClient
         src/main.cpp
         src/mainwindow.cpp
@@ -22,7 +21,6 @@ add_executable(qtClient
 
 target_link_libraries(qtClient PRIVATE Qt6::Widgets Qt6::WebSockets)
 
-# Тесты
 add_executable(testGameBoard
         test/test_gameboard.cpp
         src/gameboard.cpp
@@ -31,7 +29,6 @@ add_executable(testGameBoard
 
 target_link_libraries(testGameBoard PRIVATE Qt6::Widgets Qt6::Test)
 
-# Тесты для MainWindow
 add_executable(testMainWindow
         test/test_mainwindow.cpp
         src/mainwindow.cpp
